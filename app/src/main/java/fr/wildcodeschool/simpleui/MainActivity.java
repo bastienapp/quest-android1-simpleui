@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final Button accept = findViewById(R.id.accept);
-        final TextView firstname = findViewById(R.id.firstname);
-        final TextView lastname = findViewById(R.id.lastname);
+        final EditText firstname = findViewById(R.id.firstname);
+        final EditText lastname = findViewById(R.id.lastname);
         final TextView success = findViewById(R.id.congrats);
 
         CheckBox checkboxWilder = findViewById(R.id.checkbox_wilder);
