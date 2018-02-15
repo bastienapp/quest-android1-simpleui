@@ -8,7 +8,7 @@
     tools:context="fr.wildcodeschool.simpleui.MainActivity">
 
     <TextView
-        android:id="@+id/welcome"
+        android:id="@+id/text_welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
@@ -24,10 +24,10 @@
         android:text="@string/be_a_wilder"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+        app:layout_constraintTop_toBottomOf="@+id/text_welcome" />
 
     <EditText
-        android:id="@+id/firstname"
+        android:id="@+id/edit_firstname"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:enabled="false"
@@ -35,33 +35,32 @@
         app:layout_constraintTop_toBottomOf="@+id/checkbox_wilder" />
 
     <EditText
-        android:id="@+id/lastname"
+        android:id="@+id/edit_lastname"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:enabled="false"
         android:hint="@string/lastname"
-        app:layout_constraintTop_toBottomOf="@+id/firstname" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_firstname" />
 
     <Button
-        android:id="@+id/accept"
+        android:id="@+id/button_accept"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="@string/accept"
-        app:layout_constraintTop_toBottomOf="@+id/lastname" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_lastname" />
 
     <TextView
-        android:id="@+id/congrats"
+        android:id="@+id/text_congrats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/congratulation"
-        app:layout_constraintTop_toBottomOf="@+id/accept"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
         android:visibility="gone"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_accept"
+        tools:text="@string/congratulation" />
 
 </android.support.constraint.ConstraintLayout>
