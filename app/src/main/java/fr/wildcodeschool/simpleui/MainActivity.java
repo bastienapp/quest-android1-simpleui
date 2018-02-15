@@ -1,8 +1,10 @@
 package fr.wildcodeschool.simpleui;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
                     textSuccess.setText(String.format(congrats, firstname, lastname));
                     textSuccess.setVisibility(View.VISIBLE);
                 }
+                // hides keyboard
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
             }
         });
     }
